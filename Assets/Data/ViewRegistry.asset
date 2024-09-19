@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbf3d870e1e4ca4bb83cca0206f00ee, type: 3}
+  m_Name: ViewRegistry
+  m_EditorClassIdentifier: 
+  <MainMenuPanel>k__BackingField: {fileID: 827353061510161747, guid: c94e815214011fd45beeff40e87a3dee, type: 3}
+  <GameScreenView>k__BackingField: {fileID: 4628260994139560774, guid: f43b6a09dcc13bd4e9e181b288ef616e, type: 3}
+  <InGameKeyboardView>k__BackingField: {fileID: 370945137, guid: 03fbd339a4e2d1f439075c41c5609fee, type: 3}
+  <GameplayCanvas>k__BackingField: {fileID: 270991248348277273, guid: d0d2ae17154e22c40a73337731f8bdc9, type: 3}
+  <AvatarIconView>k__BackingField: {fileID: -1551020174379476574, guid: 24e2e46591b3c5f44899e4a641070642, type: 3}
+  <NumberGuessElementView>k__BackingField: {fileID: 1028731154665306531, guid: 59dea0f06a82b114eba753d3cd0016f4, type: 3}
+  <GameConfigurationMenuPanel>k__BackingField: {fileID: 2407413611999279842, guid: ed509fc838f010040b29306d80572a0c, type: 3}
