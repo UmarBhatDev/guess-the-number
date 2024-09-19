@@ -2,6 +2,7 @@
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using GTN.ViewSystem;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,7 @@ namespace GTN.Features.MainScreen
         
         [SerializeField] private Button _backButton;
         [SerializeField] private Button _playButton;
+        [SerializeField] private TMP_Text _errorText;
         [SerializeField] private CanvasGroup _menuCanvasGroup;
         [SerializeField] private RectTransform _backButtonTransform;
         [SerializeField] private RectTransform _playButtonTransform;
@@ -57,8 +59,17 @@ namespace GTN.Features.MainScreen
 
             _backButton.onClick.AddListener(() => OnBackButtonPressed?.Invoke());
             _playButton.onClick.AddListener(() 
-                => OnPlayButtonPressed?.Invoke(_randomRangeConfigurationPanel.GetInputData(), 
-                    _playersConfigurationPanelView.GetInputData()));
+                =>
+            {
+                _errorText.gameObject.SetActive(false);
+
+                var randomNumbers = _randomRangeConfigurationPanel.GetInputData();
+
+                if (randomNumbers.to <= randomNumbers.from)
+                    _errorText.gameObject.SetActive(true);
+                else OnPlayButtonPressed?.Invoke(randomNumbers, _playersConfigurationPanelView.GetInputData());
+                
+            });
 
             _playersConfigurationPanelView.OnAvailabilityChanged +=
                 isAvailable => _playButton.interactable = isAvailable;
